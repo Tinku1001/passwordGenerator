@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
+  <style>
+    .checkbox-options {
+      display: flex;
+      gap: 5px; /* Space between checkboxes */
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -23,7 +30,17 @@
         <label for="password-length">Total Characters</label>
       </div>
       
+      <div class="checkbox-options">
+        <!-- <h3>This is our password generator section.</h3> -->
+        <label><input type="checkbox" id="include-numbers" checked> Include Numbers</label><br>
+        <label><input type="checkbox" id="include-letters" checked> Include Letters</label><br>
+        <label><input type="checkbox" id="include-mixed-case" checked> Include Mixed Case</label><br>
+        <label><input type="checkbox" id="include-punctuation" checked> Include Punctuation</label><br>
+      </div>
+      <p>Please select at least one checkbox to generate a password.</p>       
+     
   </div>
+  
 
   <script src="script.js"></script>
 </body>
