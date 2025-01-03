@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Generator</title>
-  <style>
-    .checkbox-options {
-      display: flex;
-      gap: 5px; /* Space between checkboxes */
-      align-items: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Password Generator</h1>
-    <div class="password-row">
-      <input type="text" id="password">
-      <p class="clipboard-message" id="clipboard-msg">Password copied to clipboard!</p>
-      <button id="copy-btn">Copy Password</button>
-    </div>
-    
-    <div class="slider-container">
-        <label for="password-length">Use the slider and select options to lengthen your password (6-24):</label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .checkbox-options {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <div class="password-row">
+        <input type="text" id="password" />
+        <p class="clipboard-message" id="clipboard-msg">
+          Password copied to clipboard!
+        </p>
+        <button id="copy-btn">Copy Password</button>
+      </div>
+
+      <div class="slider-container">
+        <label for="password-length"
+          >Use the slider and select options to lengthen your password
+          (6-24):</label
+        >
         <div class="slider-row">
-          <input type="range" id="password-length" min="6" max="24" value="9">
+          <input type="range" id="password-length" min="6" max="24" value="9" />
           <span id="password-length-value">9</span>
         </div>
         <label for="password-length">Total Characters</label>
       </div>
-      
+
       <div class="checkbox-options">
-        <!-- <h3>This is our password generator section.</h3> -->
-        <label><input type="checkbox" id="include-numbers" checked> Include Numbers</label><br>
-        <label><input type="checkbox" id="include-letters" checked> Include Letters</label><br>
-        <label><input type="checkbox" id="include-mixed-case" checked> Include Mixed Case</label><br>
-        <label><input type="checkbox" id="include-punctuation" checked> Include Punctuation</label><br>
+        <label
+          ><input type="checkbox" id="include-numbers" checked /> Include
+          Numbers</label
+        ><br />
+        <label
+          ><input type="checkbox" id="include-letters" checked /> Include
+          Letters</label
+        ><br />
+        <label
+          ><input type="checkbox" id="include-mixed-case" checked /> Include
+          Mixed Case</label
+        ><br />
+        <label
+          ><input type="checkbox" id="include-punctuation" checked /> Include
+          Punctuation</label
+        ><br />
       </div>
       <p>Please select at least one checkbox to generate a password.</p>
-      
+
       <div class="info-section">
         <h2>Do you use any of these weak passwords?</h2>
         <ul>
@@ -53,12 +70,14 @@
         <h2>Why are those passwords weak?</h2>
         <ul>
           <li>They're easy to guess or crack.</li>
-          <li>If one of your logins is compromised, a hacker can access all your services.</li>
+          <li>
+            If one of your logins is compromised, a hacker can access all your
+            services.
+          </li>
         </ul>
       </div>
-     
-  </div>  
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
