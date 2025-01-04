@@ -171,3 +171,15 @@ label {
   background-color: #0056b3;
 }
 
+#password {
+  flex-grow: 1;
+  width: 70%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #333;
+}
+
+
