@@ -14,6 +14,7 @@ passwordRow.className = "password-row";
 container.appendChild(passwordRow);
 
 const passwordInput = document.createElement("input");
+
 passwordInput.type = "text";
 passwordInput.id = "password";
 passwordRow.appendChild(passwordInput);
@@ -22,7 +23,7 @@ const clipboardMsg = document.createElement("p");
 clipboardMsg.className = "clipboard-message";
 clipboardMsg.id = "clipboard-msg";
 clipboardMsg.textContent = "Password copied to clipboard!";
-clipboardMsg.style.display = "none"; // Hide by default
+clipboardMsg.style.display = "none";
 clipboardMsg.style.position = "fixed";
 clipboardMsg.style.bottom = "50px";
 clipboardMsg.style.left = "10px";
@@ -30,6 +31,7 @@ clipboardMsg.style.backgroundColor = "#dff0d8";
 clipboardMsg.style.padding = "10px";
 clipboardMsg.style.borderRadius = "5px";
 clipboardMsg.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.2)";
+
 document.body.appendChild(clipboardMsg);
 
 const copyButton = document.createElement("button");
@@ -44,8 +46,8 @@ container.appendChild(sliderContainer);
 
 const sliderLabel = document.createElement("label");
 sliderLabel.htmlFor = "password-length";
-sliderLabel.textContent =
-  "Use the slider and select options to lengthen your password (6-24):";
+sliderLabel.textContent ="Use the slider and select options to lengthen your password (6-24):";
+
 sliderContainer.appendChild(sliderLabel);
 
 const sliderRow = document.createElement("div");
@@ -124,7 +126,7 @@ infoSections.forEach((section) => {
   infoSection.appendChild(sectionTitle);
 
   const ul = document.createElement("ul");
-  
+
   section.items.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
@@ -135,10 +137,11 @@ infoSections.forEach((section) => {
 
 // Options alert
 const optionsAlert = document.createElement("div");
+
 optionsAlert.className = "options-alert";
 optionsAlert.textContent =
   "Please select at least one checkbox to generate a password.";
-optionsAlert.style.display = "none"; // Hide by default
+optionsAlert.style.display = "none";
 optionsAlert.style.position = "fixed";
 optionsAlert.style.bottom = "10px";
 optionsAlert.style.left = "10px";
@@ -151,16 +154,17 @@ document.body.appendChild(optionsAlert);
 // Show Clipboard Message
 function showClipboardMessage() {
   const clipboardMsg = document.getElementById("clipboard-msg");
-  clipboardMsg.style.display = "block"; // Show the message
+  clipboardMsg.style.display = "block"; 
   setTimeout(() => {
-    clipboardMsg.style.display = "none"; // Hide after 2 seconds
+    clipboardMsg.style.display = "none";
   }, 2000);
 }
 
-// Show Options Alert (Error)
+// Show Options Alert (Error) 
 function showOptionsAlert() {
-  optionsAlert.style.display = "block"; // Show the message
+  optionsAlert.style.display = "block";
+
   setTimeout(() => {
-    optionsAlert.style.display = "none"; // Hide after 2 seconds
+    optionsAlert.style.display = "none";
   }, 2000);
 }
