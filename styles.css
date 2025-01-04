@@ -1,12 +1,131 @@
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('backgroundimage.jpeg');
-    background-size: cover;
-    background-position: center;
-    /* background-repeat: no-repeat; */
-   
-  }
-  
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('backgroundimage.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+ 
+}
+
+.checkbox-options {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* General container styles */
+.container {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Password row styles */
+.password-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#password {
+  flex: 1;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.clipboard-message {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background-color: #4caf50; /* Green for success */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* On top of other elements */
+  text-align: center;
+}
+
+/* Slider container styles */
+.slider-container {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* Checkbox options styles */
+.checkbox-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Options alert styles (Error message) */
+.options-alert {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #e74c3c; /* Red for error */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* On top of other elements */
+  text-align: center;
+}
+
+/* Info sections */
+.info-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.info-section ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Input and label styles */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+label {
+  font-size: 14px;
+}
+
+
+
+

@@ -1,4 +1,4 @@
-
+// Create container
 const container = document.createElement("div");
 container.className = "container";
 document.body.appendChild(container);
@@ -22,7 +22,15 @@ const clipboardMsg = document.createElement("p");
 clipboardMsg.className = "clipboard-message";
 clipboardMsg.id = "clipboard-msg";
 clipboardMsg.textContent = "Password copied to clipboard!";
-passwordRow.appendChild(clipboardMsg);
+clipboardMsg.style.display = "none"; // Hide by default
+clipboardMsg.style.position = "fixed";
+clipboardMsg.style.bottom = "50px";
+clipboardMsg.style.left = "10px";
+clipboardMsg.style.backgroundColor = "#dff0d8";
+clipboardMsg.style.padding = "10px";
+clipboardMsg.style.borderRadius = "5px";
+clipboardMsg.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.2)";
+document.body.appendChild(clipboardMsg);
 
 const copyButton = document.createElement("button");
 copyButton.id = "copy-btn";
@@ -112,9 +120,11 @@ infoSections.forEach((section) => {
 
   const sectionTitle = document.createElement("h2");
   sectionTitle.textContent = section.title;
+
   infoSection.appendChild(sectionTitle);
 
   const ul = document.createElement("ul");
+  
   section.items.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
@@ -122,3 +132,35 @@ infoSections.forEach((section) => {
   });
   infoSection.appendChild(ul);
 });
+
+// Options alert
+const optionsAlert = document.createElement("div");
+optionsAlert.className = "options-alert";
+optionsAlert.textContent =
+  "Please select at least one checkbox to generate a password.";
+optionsAlert.style.display = "none"; // Hide by default
+optionsAlert.style.position = "fixed";
+optionsAlert.style.bottom = "10px";
+optionsAlert.style.left = "10px";
+optionsAlert.style.backgroundColor = "#f2dede";
+optionsAlert.style.padding = "10px";
+optionsAlert.style.borderRadius = "5px";
+optionsAlert.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.2)";
+document.body.appendChild(optionsAlert);
+
+// Show Clipboard Message
+function showClipboardMessage() {
+  const clipboardMsg = document.getElementById("clipboard-msg");
+  clipboardMsg.style.display = "block"; // Show the message
+  setTimeout(() => {
+    clipboardMsg.style.display = "none"; // Hide after 2 seconds
+  }, 2000);
+}
+
+// Show Options Alert (Error)
+function showOptionsAlert() {
+  optionsAlert.style.display = "block"; // Show the message
+  setTimeout(() => {
+    optionsAlert.style.display = "none"; // Hide after 2 seconds
+  }, 2000);
+}
